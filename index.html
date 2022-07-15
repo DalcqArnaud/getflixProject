@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function openDialog() {
+            Avgrund.show( "#default-popup" );
+        }
+        function closeDialog() {
+            Avgrund.hide();
+        }
+    </script>
+</head>
+<body>
+    <input id="register" type="button" value="Register" onclick="javascript:openDialog();">
+    <aside id="default-popup" class="avgrund-popup">
+       <form action="" method="post">
+                <p>Register</p><br>
+                <label for="First Name">first name </label>
+                <input type="text" name="first" id="first" placeholder="First Name"><br>
+                <label for="Last Name">last name </label>
+                <input type="text" name="Last" id="last" placeholder="Last Name"><br>
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" placeholder="Email"><br>
+                <label for="password">password</label>
+                <input type="password"  name="password" id="password" placeholder="Password"><br>
+                <label for="confirm">confirm</label>
+                <input type="password" name="confirm" id="confirm" placeholder="Confirm Password"><br>
+
+       </form>
+        <button onclick="javascript:closeDialog();">Close</button>
+    </aside>
+
+    <article class="avgrund-contents">
+      
+     
+
+    
+    </article>
+
+    <div class="avgrund-cover"></div>
+
+    <script type="text/javascript" src="js/avgrund.js"></script>
+
+   
+
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
