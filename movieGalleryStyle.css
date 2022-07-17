@@ -53,4 +53,69 @@
 #categoriesList > li > a {
     cursor: pointer;
 }
+
+body{
+    display: grid;
+    grid-template-rows: 60px 100px 1fr;
+}
+
+#headerDiv{
+    grid-row: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 70% 1fr;
+    place-items: center;
+}
+
+#headerDiv > p{
+    grid-column: 1/1;
+    font-size: xx-large;
+}
+
+#headerDiv > button{
+    grid-column: 3/3;
+    height: 50%;
+    width: 75%;
+}
+
+#searchDiv{
+    grid-row: 2/2;
+    place-self: center;
+}
+
+#searchDiv > input{
+    height: 30px;
+    width: 270px;
+}
+
+#GalleryDiv{
+    grid-row: 3/3;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+#LeftGallery{
+    grid-column: 1/1;
+    display: grid;
+    grid-template-rows: 1fr 75%;
+    row-gap: 30px;
+}
+
+#sortDropDownDiv{
+    grid-row: 1/1;
+    justify-self: center;
+}
+
+#categoriesDiv{
+    grid-row: 2/2;
+    margin-left: 30px;
+}
+
+#categoriesListTitle{
+    font-size: larger;
+    line-height: 200%;
+}
+
+#MoviesContainer{
+    grid-column: 2/2;
+}
   
