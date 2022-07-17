@@ -4,6 +4,11 @@ GetFlix is a group project about creating a streaming platform web site.
 This project is a consolidation challenge, the main goal is to make us practising our new backend skills (PHP, databases, API) and put it together with frontend in a complex project. It is make from 11th July 2022 until 5th August 2022.
 
 ---
+### Final result
+
+Live version of the project [coming soon](https://github.com/DalcqArnaud/getflixProject)!
+
+---
 ### Group members
 
 - [Arnaud](https://github.com/DalcqArnaud)
@@ -67,7 +72,7 @@ We are using theses programming languages beceause they are the ones that we kno
 
 ### Technologies
 
-To be able to host a web site with a database, we foudn the solution to make the database remote and not local. We are expecting to be able to achieve this by using [Mongodb](https://www.mongodb.com/atlas/database) to make our database remote and then hosting the web site using [Heroku](https://www.heroku.com/). 
+To be able to host a web site with a database, we found the solution to make the database remote and not local. We are expecting to be able to achieve this by using [Mongodb](https://www.mongodb.com/atlas/database) to make our database remote and then hosting the web site using [Heroku](https://www.heroku.com/). 
 To get the movie datas we are using [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction).
 
 ### Design & style
@@ -84,3 +89,27 @@ Here are some sketchs of the design and style we agreed on :
 ![Home page style](./images/homepage%20style.png)
 
 </details>
+
+---
+
+## How to Contribute 
+
+* Create a personal fork of the project on Github.
+* Clone the fork on your local machine. Your remote repo on Github is called `origin`.
+* Add the original repository as a remote called `upstream`.
+* If you created your fork a while ago be sure to pull upstream changes into your local repository.
+* Create a new branch to work on! Branch from `main`.
+* Implement/fix your feature, comment your code.
+* Follow the code style of the project, including indentation.
+* If the project have tests run them!
+* Write or adapt tests as needed.
+* Add or if any documentation exist change it as needed.
+* Squash your commits into a single commit with git's [interactive rebase](https://help.github.com/articles/interactive-rebase). Create a new branch if necessary.
+* Push your branch to your fork on Github, the remote `origin`.
+* From your fork open a pull request in the correct branch. Target the project's `main`!
+* …
+* Once the pull request is approved and merged you can pull the changes from `upstream` to your local repo and delete your extra branch(es).
+
+And last but not least: Always write your commit messages in the present tense. Your commit message should describe what the commit, when applied, does to the code – not what you did to the code.
+
+---
