@@ -115,7 +115,84 @@ body{
     line-height: 200%;
 }
 
-#MoviesContainer{
+#RightGallery{
     grid-column: 2/2;
+}
+
+.movieContainer{
+    width: 100%;
+    display: inline-block;
+}
+
+.movieDiv{
+    width: 33.3334%;
+    height: 100%;
+    margin: 0;
+    display: inline-block;
+}
+
+.movieDiv:hover{
+    cursor: pointer;
+}
+
+.movieDiv>img{
+    width: 100%;
+    background-size: cover;
+}
+
+.movieDiv>img:hover{
+    transform: scale(1.05);
+}
+
+.movieDiv>p{
+    font-size: larger;
+    text-align: center;
+}
+
+#carrouselDiv{
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#carrouselContainer{
+    height: 100%;
+    width: 100%;
+    white-space : nowrap;
+    display: inline-block;
+}
+
+.carrouselBtn{
+    position: absolute;
+    width: 50px;
+    cursor: pointer;
+    top: 125px;
+}
+
+#carrouselLeftBtn{
+    left: 0;
+    opacity: 0.4;
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+#carrouselLeftBtn:hover{
+    transform: scale(1.1) rotate(180deg);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+#carrouselRightBtn{
+    right: 0;
+    opacity: 0.4;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+}
+
+#carrouselRightBtn:hover{
+    transform: scale(1.1) rotate(0deg);
+    opacity: 1;
+    transition: all 0.3s ease;
 }
   
