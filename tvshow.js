@@ -10,23 +10,23 @@ const genres = []
 const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
-const tagsEl = document.getElementById('tags');
+const tagsBox = document.getElementById('tags');
 
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
 const current = document.getElementById('current')
 
-let currentPage = 1;
-let nextPage = 2;
-let prevPage = 3;
-let lastUrl = '';
-let totalPages = 100;
+let pageone = 1;
+let pagetwo = 2;
+let pagethree = 3;
+let totalPages = 50;
 
-let selectedGenre = []
+let searchedGenre = []
+
 setGenre();
 
 function setGenre() {
-    tagsEl.innerHTML = '';
+    tags.innerHTML = '';
     genres.forEach(genre => {
         const allDiv = document.createElement('div');
         allDiv.classList.add('tag');
@@ -50,7 +50,7 @@ function setGenre() {
             getTvShow(API_URL + '&with_genres=' + encodeURI(selectedGenre.join(',')))
             highlightSelection()
         })
-        tagsEl.append(t);
+        tagsEl.append(allDiv);
     })
 }
 
@@ -93,14 +93,14 @@ getTvShow(API_URL);
 
 function getTvShow(url) {
     lastUrl = url;
-    fetch(url).then(res => res.json()).then(data => {
-        console.log(data.results)
-        if (data.results.length !== 0) {
-            showTV(data.results);
-            currentPage = data.page;
+    fetch(url).then(res => res.json()).then(list => {
+        console.log(list.results)
+        if (list.results.length !== 0) {
+            showTV(list.results);
+            currentPage = list.page;
             nextPage = currentPage + 1;
             prevPage = currentPage - 1;
-            totalPages = data.total_pages;
+            totalPages = list.total_pages;
 
             current.innerText = currentPage;
 
@@ -122,10 +122,10 @@ function getTvShow(url) {
     })
 }
 
-function showTV(data) {
+function showTV(list) {
     main.innerHTML = '';
 
-    data.forEach(movie => {
+    list.forEach(movie => {
         const { title, poster_path, id } = movie;
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
@@ -150,8 +150,8 @@ function showTV(data) {
 
 
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+form.addEventListener('submit', (el) => {
+    el.preventDefault();
     const searchTerm = search.value;
     selectedGenre = [];
     setGenre();
@@ -171,11 +171,11 @@ prev.addEventListener('click', () => {
 
 next.addEventListener('click', () => {
     if (nextPage <= totalPages) {
-        pageCall(nextPage);
+        rendPage(nextPage);
     }
 })
 
-function pageCall(page) {
+function rendPage(page) {
     let urlSplit = lastUrl.split('?');
     let queryParams = urlSplit[1].split('&');
     let key = queryParams[queryParams.length - 1].split('=');

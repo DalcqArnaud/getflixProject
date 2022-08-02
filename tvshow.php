@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <script src="nav2.js"></script> -->
   <link rel="stylesheet" href="movie.css">
-  <link rel="stylesheet" href="navbar.css">
-  <title>Movie App</title>
+
+  <title>Getflix</title>
 </head>
 
 <body>

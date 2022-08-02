@@ -15,13 +15,12 @@ const prev = document.getElementById('prev')
 const next = document.getElementById('next')
 const current = document.getElementById('current')
 
-let currentPage = 1;
-let nextPage = 2;
-let prevPage = 3;
-let lastUrl = '';
+let pageone = 1;
+let pagetwo = 2;
+let pagethree = 3;
 let totalPages = 50;
 
-let selectedGenre = []
+let searchedGenre = []
 setGenre();
 
 function setGenre() {
