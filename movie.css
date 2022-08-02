@@ -1,0 +1,47 @@
+
+* {   margin: 0%;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --primary-color:  #001336;
+    --secondary-color:  #ce682b;
+}
+
+body {
+    background-color: #001336;
+    font-family:  sans-serif;
+    margin: 0;
+    overflow-y: scroll;
+}
+
+.movie {
+    width: 250px;
+    height: 200px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.page {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.page.disabled {
+    cursor: not-allowed;
+    color: grey;
+}
+
+.current {
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    font-size: 20px;
+    font-weight: 600;
+}
+
