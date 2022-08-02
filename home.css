@@ -7,213 +7,154 @@ html,
 body {
     width: 100VW;
     height: 100vh;
-    /* margin: 0;
-	padding: 0; */
+    margin: 0;
+	padding: 0;
     font-family: sans-serif;
     overflow: hidden;
     background-color: #001336;
     color: white;
 }
 
-header {
-    margin-top: 100px;
+#nav {
+    height: 50px;
     width: 100%;
-    height: 30px;
-    color: white;
-}
+    background-color: var(--primary-color);
+    position: relative;
+  }
+  
+  #nav > .nav-header {
+    display: inline;
+  }
+  
+  #nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
 
-.logo {
-    float: left;
-    font-size: 2rem;
-    margin-left: 120px;
-    color: white;
-    font-family: sans-serif;
 }
+  
+  
+  #nav > .nav-btn {
+    display: none;
 
-nav {
-    width: 100%;
-}
+  }
+  
+  #nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+ 
 
-li {
-    display: flex;
+  }
+  
+  #nav > .nav-links > a {
+    display: inline-block;
     margin-top: 20px;
+    margin-left: 15px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: sans-serif;
-    float: left;
     background-color: #ce682b;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
-    width: 90px;
+    width: 120px;
     text-align: center;
     color: white;
 }
+  
+  
+  #nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  #nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    #nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    #nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    #nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    #nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    #nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    #nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    #nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
 
-.container {
-    background-image: url("/getflixProject/images/neflix\ background.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin: auto;
+
+
+
+main {
+  
+
     margin-top: 50px;
     width: 100%;
-    height: 500px;
+    height: 400px;
+    z-index: 100;
     align-items: center;
-}
+    position: relative;
+} 
+ .jumbotron{
 
-.screen {
-    /* margin: auto; */
-    margin: 80px 200px 0px 400px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  margin: auto;
+  margin-top: 100px;
+   width: 50%;
+   height: 400px;
+   -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: #001336;
     border-radius: 12px;
     -webkit-backdrop-filter: blur(34px);
     backdrop-filter: blur(34px);
-    width: 50%;
-    height: 350px;
-    line-height: 30px;
-    z-index: 100;
-    position: absolute;
-}
+  
 
-.gallery-btn {
-    margin: auto;
-    margin-left: 300px;
-    border-radius: 10px;
-    padding: 10px;
-    width: 130px;
-    font-size: 30px;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    background-color: #ce682b;
-    font-family: sans-serif;
-}
+} 
 
-h1 {
-    margin-top: 20px;
-    text-align: center;
-}
 
-p {
-    margin: auto;
-    font-size: 20px;
-    width: 70%;
-    color: black;
-    font-family: sans-serif;
-}
 
-footer {
-    width: 100%;
-    height: 110px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
 
-.contact h1 {
-    color: white;
-    float: left;
-    margin-left: 50px;
-    padding: 0px;
-    font-family: sans-serif;
-}
 
-.contact p {
-    color: white;
-    float: left;
-    margin-left: 100px;
-    font-family: sans-serif;
-}
-
-.icon {
-    margin: 20px;
-    margin-left: 500px;
-}
-
-.icon a {
-    color: white;
-    font-size: 2rem;
-    padding: 10px;
-    width: 100%;
-    font-family: sans-serif;
-}
-
-.copyright {
-    color: white;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-family: sans-serif;
-}
 
 @media screen and (max-width: 480px) {
-    header {
-        margin-top: 10px;
+    P{
+       font-size:8px;
     }
-    nav {
-        margin-top: 10px;
-    }
-    ul {
-        margin-left: 0px;
-    }
-    li {
-        margin-left: 10px;
-        display: inline-block;
-        text-decoration: none;
-        font-size: 1rem;
-    }
-    .container {
-        width: 60%;
-        margin-bottom: 50px;
-        padding: 0px;
-        padding-top: 100px;
-        display: flex;
-        flex-direction: column;
-    }
-    h1 {
-        padding: 0px;
-        font-size: 1rem;
-        text-shadow: 6px 0px black;
-    }
-    P {
-        font-size: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    header {
-        margin-top: 10px;
-    }
-    nav {
-        width: 100%;
-        margin-top: 10px;
-    }
-    ul {
-        margin-left: 600px;
-    }
-    li {
-        margin-left: 30px;
-        display: inline-block;
-        text-decoration: none;
-        font-size: 1rem;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    nav {
-        width: 100%;
-    }
-    ul {
-        margin-top: 0px;
-        margin-left: 800px;
-    }
-    li {
-        margin-left: 40px;
-        display: inline-block;
-        text-decoration: none;
-        font-size: 1rem;
-    }
-}
+  }
