@@ -15,63 +15,44 @@
 </head>
 
 <body>
-  <div class="warraper">
-    <div id="nav">
+<nav class="navbar navbar-expand-lg py-0" style="border-bottom: 1px solid #CE5937;">
+  
 
-      <nav class="navbar navbar-expand-lg  navbar-light justify-content-end font-sans-serif m-3">
-        <div class="container-fluid shadow-lg fixed-top" style="color:white">
-          <a class="navbar-brand me-5 " href="#home-page">
-            <h1 class="text-white lh-lg font-sans-serif">SwartzFlix</h1>
-          </a>
-          <button class="navbar-toggler" style="background-color:#ce682b; color:white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            <ul class="navbar-nav w-100 justify-content-end ">
-              <form class="d-flex m-2" role="search">
-                <input class="form-control me-2 w-75" type="search" placeholder="Search" aria-label="Search" id="search">
-                <button class="btn btn-outline" style="background-color:#ce682b; color:white; " type="submit">Search</button>
-              </form>
-
-              <li class="nav-item m-2 ">
-                <button class="btn btn-outline-light  text-center " type="button">
-                  <a class="nav-link active san-serif btn btn-outline" style=" background-color:#ce682b;color:white; width:100px" aria-current="page" href="./index.php">home</a>
-                </button>
-              </li>
-              <li class="nav-item m-2">
-                <button class="btn btn-outline-light  text-center" type="button">
-                  <a class="nav-link san-serif btn btn-outline" style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="./src/text.php">TV-Shows</a>
-                </button>
-              </li>
-              <li class="nav-item san-serif m-2">
-                <button class="btn btn-outline-light  text-center" type="button">
-                  <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="./src/text.php">Movies</a>
-                </button>
-              </li>
-              <li class="nav-item san-serif m-2">
-                <button class="btn btn-outline-light  text-center" type="button">
-                  <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="/src/login.php">Login</a>
-                </button>
-              </li>
-            </ul>
-      </nav>
+    <div class="col col-lg-3 d-flex">
+    <a class="navbar-brand me-5 " style="padding-left: 20px;text-shadow: -6px 8px 0px #CE5937;"; href="#home-page">
+            <h1 class="text-white lh-lg font-sans-serif" id="logo1" style="text-shadow: -3px 6px 0px #CE5937;">SwartzFlix</h1>
+          </a>    </div>
 
 
+
+
+    <div class="col-6 d-flex align-middle" style="display: flex; align-items: center;justify-content: center; color: #CE5937">
+<p id="SWF">SWF</p>
     </div>
 
 
-    <main class="flex-shrink-1 bg-image" style="
-    background-image: url('../getflixProject/images/neflix background.png');
-    height: 400px;
-    background-size:100%;
+
+    <div class="col-md d-flex justify-content-around">
+      <div class=" d-flex justify-content-around">
+     
+              <a id="logIn" class="nav-link btn btn-outline " style="  padding:10px; text-decoration: none; font-weight: bold; font-size: 40px; display: inline;" aria-current="page" href="/src/login.php">Log-in</a>
+      
+              </div>
+     
+    </div>
+
+</nav>
+
+<div class="row">
+    <main class="flex-shrink-1 bg-image" style=" margin:none; 
+    background-image: url('images/universcine-svod-catalogue.jpg');
+    height: 850px;
+    background-size:100%; z-index: index -3;
   ">
         <div class="jumbotron m-auto mt-5">
 
-          <h1 class="display-5 text-center p-2">Welcome</h1>
-          <p class="lead m-3 text-center">Lorem ipsum, necessitatibus dignissimos quo fugiat vero omnis libero hic cupiditate sapiente consequatur ullam explicabo cum incidunt id?</p>
+          <h1 class="display-5 text-center p-2" class="textsha">Welcome</h1>
+          <p class="lead m-3 text-center" class="textsha">Lorem ipsum, necessitatibus dignissimos quo fugiat vero omnis libero hic cupiditate sapiente consequatur ullam explicabo cum incidunt id?</p>
           <div class="text-center ">
           <button class="btn btn-outline-light text-center" type="button">
             <a class="nav-link active san-serif btn btn-outline   " style=" background-color:#ce682b;color:white; width:100px; padding:10px; " aria-current="page" href="./src/text.php">Gallery</a>
@@ -82,31 +63,28 @@
 
     </main>
 
-
-  <footer class="footer mt-auto py-3 ">
-    <div class="container">
-      <div class="row h-25">
-        <div class="col-lg-6 col-md-6 col-sm-3">
-          <h1>SwartzFlix</h1>
+    </div>
+  <footer class="footer mt-auto py-3 fixed-bottom" style=" background-color:#001336; -webkit-box-shadow: -15px 5px 15px 2px #FF8B12, 0px 0px 50px 25px #FF8B12; 
+box-shadow: -15px 5px 15px 2px #FF8B12, 0px 0px 50px 25px #FF8B12;">
+    
+      <div class="row h-25 d-">
+        <div class="col-lg-4 col-md-6 col-sm-3" style="position:relative;">
+          <p class="textsha" style =" text-shadow: -7px 5px 20px #CE5806; margin:auto; ;position: absolute;top: 50%; left: 10%; transform: translate(-0%, -50%);
+ ">SwartzFlix</p>
 
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-3">
-          <form action="" method="post">
-            <input type="email" name="email">
-            <input type="submit" value="Subscribe" style="background-color:#ce682b; color:white">
-          </form>
-
-          <div class="social-links mt-3 ">
-            <a href="#" style="background-color:#ce682b; margin:20px" target="_blank "><i class="fa fa-github " style="color:white"></i></a>
-            <a href="#" style="background-color:#ce682b; margin:20px" target="_blank "><i class="fa fa-linkedin " style="color:white"></i></a>
-            <a href="#" style="background-color:#ce682b; margin:20px"><i class="fa fa-instagram " target="_blank " style="color:white"></i></a>
-            <a href="#" style="background-color:#ce682b; margin:20px" target="_blank "><i class="fa fa-youtube " style="color:white"></i></a>
-
-            <div class="copyright col-lg-12"> &copy; Copyright <strong><span>Getflix</span></strong>. All Rights Reserved </div>
-            <div class="credits col-lg-12"> Designed by <a style="color:#ce682b" href="#">getflixgroup</a>
-            </div>
+        <div class="col-lg-4 col-md-6 col-sm-3" style="position:relative;">
+       
+  
           </div>
-        </div>
+        
+          <div class="col-lg-4 col-md-6 col-sm-3" style="float:right">
+
+             &copy; Copyright <strong><span>Getflix</span></strong>. All Rights Reserved <br>
+             Designed by <a style="color:#ce682b;;
+  text-shadow: -7px 5px 20px #CE5806;" href="#">getflixgroup</a>
+            </div>
+            </div>
   </footer>
   </div>
 
