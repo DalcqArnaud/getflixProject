@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 60px 100px 1fr;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#categoriesList {
+    list-style: none;
+    list-style-position: outside;
+}
+#categoriesListTitle{
+    font-weight: bold;
+}
+
+#categoriesList > li > a {
+    cursor: pointer;
+}
+
+#extraCategoryLi{
+    margin-bottom: 10px;
+}
+
+#headerDiv{
+    grid-row: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 70% 1fr;
+    place-items: center;
+}
+
+#headerDiv > p{
+    grid-column: 1/1;
+    font-size: xx-large;
+}
+
+#headerDiv > button{
+    grid-column: 3/3;
+    height: 50%;
+    width: 75%;
+}
+
+#searchDiv{
+    grid-row: 2/2;
+    place-self: center;
+}
+
+#searchDiv > input{
+    height: 30px;
+    width: 270px;
+}
+
+#GalleryDiv{
+    grid-row: 3/3;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+#LeftGallery{
+    grid-column: 1/1;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+#categoriesDiv{
+    margin-left: 30px;
+}
+
+#categoriesListTitle{
+    font-size: larger;
+    line-height: 200%;
+}
+
+#RightGallery{
+    grid-column: 2/2;
+    min-width: 0;
+    min-height: 0;
+}
+
+.movieContainer{
+    width: 100%;
+    display: inline-block;
+    background-color: #001336;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+.movieDiv{
+    width: 33.3334%;
+    height: 100%;
+    margin: 0;
+    display: inline-block;
+}
+
+.movieDiv:hover{
+    cursor: pointer;
+}
+
+.movieDiv>img{
+    width: 100%;
+    background-size: cover;
+}
+
+.movieDiv>img:hover{
+    transform: scale(1.05);
+}
+
+.movieDiv>p{
+    font-size: larger;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.disappear{
+    animation: disappear 0.5s forwards;
+}
+
+.appear{
+    animation: appear 1s forwards;
+}
+
+@keyframes disappear {
+    from    { opacity: 1;}
+    to      { opacity: 0;}
+}
+
+@keyframes appear {
+    from    { opacity: 0;}
+    to      { opacity: 1;}
+}
+
+[id^=carrouselDiv]{
+    min-width: 0;
+    min-height: 0;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+[id^=carrouselTitle]{
+    text-align: center;
+    margin: 10px 0px;
+    font-size: xx-large;
+}
+
+#carrouselContainer{
+    height: 100%;
+    width: 100%;
+    white-space : nowrap;
+    display: inline-block;
+}
+
+.carrouselBtn{
+    position: absolute;
+    width: 50px;
+    cursor: pointer;
+    top: calc(50% + 22px); /*22px = .movieDiv>p text size*/
+}
+
+#carrouselLeftBtn{
+    left: 0;
+    opacity: 0.4;
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+#carrouselLeftBtn:hover{
+    transform: scale(1.1) rotate(180deg);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+#carrouselRightBtn{
+    right: 0;
+    opacity: 0.4;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+}
+
+#carrouselRightBtn:hover{
+    transform: scale(1.1) rotate(0deg);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+[id^=carrouselTitle]{
+    /* border: 3px solid black; */
+    background-color: #001336;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+#moviePopup{
+    position: fixed;
+    background-color: #001336;
+    border: 3px solid aliceblue;
+    border-radius: 5px;
+    opacity: 1;
+    width: 80%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: aliceblue;
+}
+
+#moviePopupContainer{
+    margin: 5%;
+}
+
+#moviePopupTittle{
+    font-size: x-large;
+}
+  
