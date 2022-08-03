@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function openDialog() {
+                Avgrund.show( "#default-popup" );
+            }
+            function closeDialog() {
+                Avgrund.hide();
+            }
+            
+        </script>
+    </head>
+    <body>
+
+         <input id="register" type="button" value="Register" onclick="javascript:openDialog();">
+    <div class="avgrund-cover">
+            <aside id="default-popup" class="avgrund-popup">
+                <button id="close" onclick="javascript:closeDialog();">X</button>
+                     <div class="regP">
+                            <p id="regP">Register</p>
+                    </div> 
+                      <div class="pre"><h1>Premium</h1>
+                            <li>catalog preview </li>
+                            <li>some features</li>
+                            
+                     </div>
+                     <div class="basic"> <h1>Basic</h1>
+                        <li>Catalog display</li>
+                        <li>Comments</li>
+                        <li>Ratings</li>
+                    </div>
+    
+       <form action="db.php" method="post" onsubmit="return checkForm(this);">
+            
+            <div class="first">
+                     <label class="first" for="First Name">first name </label><br>
+                     <input type="text" name="first" class="first" placeholder="First Name" required minlength="4" maxlength="16">
+            </div>
+            <div class="lastGr">
+                <label for="Last Name">last name </label><br>
+                <input type="text" name="Last" id="last" placeholder="Last Name" required  minlength="4" maxlength="16">
+            </div>
+            <div class="emCon"> 
+                <label id="emFor"for="confirmEmail">confirm email</label><br>
+                <input type="email" name="" id="emFor" placeholder="Email" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" >
+            </div>
+             <div class="">    
+                 <label id="email" class="email" for="email">email</label><br>
+                <input class="email" type="email" name="email" id="email" placeholder="Email" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" ><br>
+            </div>
+             <div class="7"> 
+                  <label for="password">password</label><br>
+                 <input type="password"  name="pwd1" id="password" placeholder="Password" required  ><br>
+            </div>
+             <div class=""> <label for="confirm">confirm</label><br>
+                <input type="password" name="pwd2" id="confirm" placeholder="Confirm Password" required ><br>
+            </div>
+            <div class="date">
+                <label for="date">date</label><br>
+                <input type="date" name="date" id="date" placeholder="" required>
+            </div>
+            <div class="submit">
+                 <input type="submit" name="submit" id="submit" value="Submit" placeholder="submit"><br>
+            </div>
+       </form>
+            
+       </aside>
+    </div>
+
+    <script type="text/javascript" src="js/avgrund.js"></script>
+
+   
+
+    <script src="avg.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
