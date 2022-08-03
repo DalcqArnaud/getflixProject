@@ -44,11 +44,17 @@
               <li class="nav-item m-2">
                 <button class="btn btn-outline-light  text-center" type="button">
                   <a class="nav-link san-serif btn btn-outline" style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="./tvshow.php">TV-Shows</a>
+
+                  <a class="nav-link san-serif btn btn-outline" style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="./src/text.php">TV-Shows</a>
+
                 </button>
               </li>
               <li class="nav-item san-serif m-2">
                 <button class="btn btn-outline-light  text-center" type="button">
+
                   <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="./movie.php">Movies</a>
+=======
+                  <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="./src/text.php">Movies</
                 </button>
               </li>
               <li class="nav-item san-serif m-2">
