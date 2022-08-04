@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="movie.css">
-  <link rel="stylesheet" href="movieGalleryStyle.css">
+  <link rel="stylesheet" href="movieGalleryHomeStyle.css">
 
 
   <title>Getflix</title>
@@ -64,17 +64,11 @@
   </div>
   
   <div id="GalleryDiv">
-        <div id="LeftGallery">
-            <div id="categoriesDiv">
-                <ul id="categoriesList"><span id="categoriesListTitle">Filters</span>
-                </ul>
-            </div>
-        </div>
         <div id="RightGallery"></div>
     </div>
 
   <script src="./tvshow.js"></script>
-  <script src="movieGalleryScript.js"></script>
+  <script src="movieGalleryHomeScript.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsp1UyJoMp4YLEuNSfAp+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "></script>
 

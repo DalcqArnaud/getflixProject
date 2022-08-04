@@ -1,5 +1,4 @@
 <?php ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <script src="nav2.js"></script> -->
   <link rel="stylesheet" href="movie.css">
-  <link rel="stylesheet" href="movieGalleryStyle.css">
-
 
   <title>Getflix</title>
 </head>
@@ -37,11 +35,11 @@
               <button class="btn btn-outline" style="background-color:#ce682b; color:white; " type="submit">Search</button>
             </form>
 
-            <li class="nav-item ">
+            <li class="nav-item  ">
               <button class="btn btn-outline-light  text-center" type="button">
                 <a class="nav-link active san-serif btn btn-outline" style=" background-color:#ce682b;color:white; width:100px" aria-current="page" href="index.php">home</a>
+              </button>
             </li>
-            </button>
             <li class="nav-item">
               <button class="btn btn-outline-light  text-center" type="button">
                 <a class="nav-link san-serif btn btn-outline" style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="tvshow.php">TV-Shows</a>
@@ -62,19 +60,35 @@
 
 
   </div>
-  
-  <div id="GalleryDiv">
-        <div id="LeftGallery">
-            <div id="categoriesDiv">
-                <ul id="categoriesList"><span id="categoriesListTitle">Filters</span>
-                </ul>
-            </div>
-        </div>
-        <div id="RightGallery"></div>
-    </div>
 
-  <script src="./tvshow.js"></script>
-  <script src="movieGalleryScript.js"></script>
+
+  <div id="tags"></div>
+  <div id="myNav" class="overlay">
+    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+
+    Button to close the overlay navigation
+    <div class="overlay-content" id="overlay-content"></div>
+
+    Overlay content
+    <a href="#" class="arrow left-arrow" id="left-arrow">&#8656;</a>
+    <a href="#" class="arrow right-arrow" id="right-arrow">&#8658;</a>
+  </div>
+
+  <main id="main">
+    <div class="search-result">Poplar</div>
+    <div class="search-result">Comodie</div>
+    <div class="search-result">Kids</div>
+
+  </main>
+  <div class="pagination">
+    <div class="page" id="prev">Previous Page</div>
+    <div class="current" id="current">1</div>
+    <div class="page" id="next">Next Page</div>
+  </div>
+  </div>
+
+  <script src="./searchResults.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsp1UyJoMp4YLEuNSfAp+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "></script>
 
