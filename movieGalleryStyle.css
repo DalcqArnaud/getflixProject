@@ -193,7 +193,7 @@ body{
     border-radius: 5px;
 }
 
-#moviePopup{
+/* #moviePopup{
     position: fixed;
     background-color: #001336;
     border: 3px solid aliceblue;
@@ -233,5 +233,5 @@ body{
 @keyframes closing {
     from    {opacity: 1;}
     to      {opacity: 0;}
-}
+} */
   

@@ -229,7 +229,9 @@ function CreateMoviesCarrousel(genre){
 
             movieDivContainer.addEventListener("click", (e) => {
                 var movieDetails = MoviesResults[e.currentTarget.getAttribute("id")];
-                CreateMoviePopup(movieDetails);
+                localStorage.setItem("mediaType", mediaType);
+                localStorage.setItem("movieId", movieDetails.id);
+                window.location.href = "movieDetails.php";
             });
             
             var movieTitleContainer = document.createElement("p");
@@ -258,7 +260,7 @@ function GetMovies(urlString, titlesContainers, postersContainers){
         return response.json();
     })
     .then(movies => {
-        console.log(movies);
+        //console.log(movies);
 
         for(let i = 0; i < moviesAmountPerGallery; i++){
             MoviesResults.push(movies.results[i]);
@@ -317,94 +319,102 @@ function UpdateCarrouselBtnDisplay(Pos, leftBtn, rightBtn){
 
 
 
-function CreateMoviePopup(movieDetails){
+// function CreateMoviePopup(movieDetails){
     
-    var moviePopupDiv = document.createElement("div");
-    moviePopupDiv.setAttribute("id", "moviePopup");
+//     var moviePopupDiv = document.createElement("div");
+//     moviePopupDiv.setAttribute("id", "moviePopup");
     
-    var moviePopupContainer = document.createElement("div");
-    moviePopupContainer.setAttribute("id", "moviePopupContainer");
-    moviePopupDiv.appendChild(moviePopupContainer);
+//     var moviePopupContainer = document.createElement("div");
+//     moviePopupContainer.setAttribute("id", "moviePopupContainer");
+//     moviePopupDiv.appendChild(moviePopupContainer);
 
-    var moviePopupTitle = document.createElement("p");
-    moviePopupTitle.setAttribute("id", "moviePopupTittle");
-    if(mediaType == "movie"){
-        if(movieDetails.title != null){
-            moviePopupTitle.textContent = movieDetails.title;
-        }
-        else{
-            moviePopupTitle.textContent = "Undefined";
-        }
-    }
-    else{
-        if(movieDetails.name != null){
-            moviePopupTitle.textContent = movieDetails.name;
-        }
-        else{
-            moviePopupTitle.textContent = "Undefined";
-        }
-    }
-    moviePopupContainer.appendChild(moviePopupTitle);
+//     var moviePopupTitle = document.createElement("p");
+//     moviePopupTitle.setAttribute("id", "moviePopupTittle");
+//     if(mediaType == "movie"){
+//         if(movieDetails.title != null){
+//             moviePopupTitle.textContent = movieDetails.title;
+//         }
+//         else{
+//             moviePopupTitle.textContent = "Undefined";
+//         }
+//     }
+//     else{
+//         if(movieDetails.name != null){
+//             moviePopupTitle.textContent = movieDetails.name;
+//         }
+//         else{
+//             moviePopupTitle.textContent = "Undefined";
+//         }
+//     }
+//     moviePopupContainer.appendChild(moviePopupTitle);
     
-    var moviePopupPoster = document.createElement("img");
-    moviePopupPoster.setAttribute("id", "moviePopupPoster");
-    if(movieDetails.backdrop_path != null){
-        moviePopupPoster.setAttribute("src", "https://image.tmdb.org/t/p/w500/" + movieDetails.backdrop_path);
-    }
-    else{
-        moviePopupPoster.setAttribute("src", "images/NotAvailableIcon.png");
-    }
-    moviePopupContainer.appendChild(moviePopupPoster);
+//     var moviePopupPoster = document.createElement("img");
+//     moviePopupPoster.setAttribute("id", "moviePopupPoster");
+//     if(movieDetails.backdrop_path != null){
+//         moviePopupPoster.setAttribute("src", "https://image.tmdb.org/t/p/w500/" + movieDetails.backdrop_path);
+//     }
+//     else{
+//         moviePopupPoster.setAttribute("src", "images/NotAvailableIcon.png");
+//     }
+//     moviePopupContainer.appendChild(moviePopupPoster);
     
-    var moviePopupSynopsis = document.createElement("p");
-    moviePopupSynopsis.setAttribute("id", "moviePopupSynopsis");
-    if(movieDetails.overview == "" || movieDetails.overview == null || movieDetails.overview.length == 0){
-        moviePopupSynopsis.textContent = "No Synopsis available :( ";
-    }
-    else{
-        moviePopupSynopsis.textContent = movieDetails.overview;
-    }
-    moviePopupContainer.appendChild(moviePopupSynopsis);
+//     var moviePopupSynopsis = document.createElement("p");
+//     moviePopupSynopsis.setAttribute("id", "moviePopupSynopsis");
+//     if(movieDetails.overview == "" || movieDetails.overview == null || movieDetails.overview.length == 0){
+//         moviePopupSynopsis.textContent = "No Synopsis available :( ";
+//     }
+//     else{
+//         moviePopupSynopsis.textContent = movieDetails.overview;
+//     }
+//     moviePopupContainer.appendChild(moviePopupSynopsis);
     
-    var moviePopupVoteAverage = document.createElement("p");
-    moviePopupVoteAverage.setAttribute("id", "moviePopupVoteAverage");
-    var roundedVoteAverage = (Math.round(movieDetails.vote_average * 10) / 10).toFixed(1);
-    if(movieDetails.vote_average != null){
-        moviePopupVoteAverage.textContent = roundedVoteAverage;
-    }
-    else{
-        moviePopupVoteAverage.textContent = "??";
-    }
-    moviePopupContainer.appendChild(moviePopupVoteAverage);
+//     var moviePopupVoteAverage = document.createElement("p");
+//     moviePopupVoteAverage.setAttribute("id", "moviePopupVoteAverage");
+//     var roundedVoteAverage = (Math.round(movieDetails.vote_average * 10) / 10).toFixed(1);
+//     if(movieDetails.vote_average != null){
+//         moviePopupVoteAverage.textContent = roundedVoteAverage;
+//     }
+//     else{
+//         moviePopupVoteAverage.textContent = "??";
+//     }
+//     moviePopupContainer.appendChild(moviePopupVoteAverage);
     
-    var moviePopupCloseIcon = document.createElement("img");
-    moviePopupCloseIcon.setAttribute("id", "moviePopupCloseIcon");
-    moviePopupCloseIcon.setAttribute("src", "images/closeIconWhite.png");
-    moviePopupContainer.appendChild(moviePopupCloseIcon);
-    moviePopupCloseIcon.addEventListener("click", () => {
-        moviePopupDiv.setAttribute("class", "popupClosing");
-        setTimeout(() =>{
-            moviePopupDiv.remove();
-        }, 250)
-    });
+//     var moviePopupCloseIcon = document.createElement("img");
+//     moviePopupCloseIcon.setAttribute("id", "moviePopupCloseIcon");
+//     moviePopupCloseIcon.setAttribute("src", "images/closeIconWhite.png");
+//     moviePopupContainer.appendChild(moviePopupCloseIcon);
+//     moviePopupCloseIcon.addEventListener("click", () => {
+//         moviePopupDiv.setAttribute("class", "popupClosing");
+//         setTimeout(() =>{
+//             moviePopupDiv.remove();
+//         }, 250)
+//     });
 
-    var moviePopupCommentBtn = document.createElement("input");
-    moviePopupCommentBtn.setAttribute("type", "button");
-    moviePopupCommentBtn.setAttribute("id", "commentBtn");
-    moviePopupCommentBtn.setAttribute("value", "View Comments");
-    moviePopupContainer.appendChild(moviePopupCommentBtn);
-    moviePopupCommentBtn.addEventListener("click", ()=>{
-        localStorage.setItem("movieDetails", movieDetails.title);
-        window.location.href = "commentPage.php";
-        var x = localStorage.getItem("movieDetails");
-   let paragraph=document.getElementById("text")
-      paragraph.value= x;
- console.log(paragraph)
-        
-    });
+//     var moviePopupCommentBtn = document.createElement("input");
+//     moviePopupCommentBtn.setAttribute("type", "button");
+//     moviePopupCommentBtn.setAttribute("id", "commentBtn");
+//     moviePopupCommentBtn.setAttribute("value", "View Comments");
+//     moviePopupContainer.appendChild(moviePopupCommentBtn);
+//     moviePopupCommentBtn.addEventListener("click", ()=>{
+//         localStorage.setItem("movieDetails", movieDetails.title);
+//         window.location.href = "commentPage.php";
+//         var x = localStorage.getItem("movieDetails");
+//         let paragraph=document.getElementById("text")
+//         paragraph.value= x;
+//         console.log(paragraph)
+//     });
 
+//     console.log(movieDetails.id);
+//     fetch("https://api.themoviedb.org/3/movie/"+ movieDetails.id +"/videos?api_key=f088ebb3ea3afd9640eb95267cc47330&language=en-US")
+//     .then(response => {
+//         return response.json();
+//     })
+//     .then(videos => {
+//         console.log(videos);
+//     });
     
-    var rightGalleryDiv = document.getElementById("RightGallery");
-    rightGalleryDiv.parentNode.insertBefore(moviePopupDiv, rightGalleryDiv.nextSibling);
     
-}
+//     var rightGalleryDiv = document.getElementById("RightGallery");
+//     rightGalleryDiv.parentNode.insertBefore(moviePopupDiv, rightGalleryDiv.nextSibling);
+    
+//}

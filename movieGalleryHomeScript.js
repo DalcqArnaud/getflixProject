@@ -92,7 +92,10 @@ function CreateMoviesCarrousel(carrouselName, type){
                 else{
                     mediaType = "tv";
                 }
-                CreateMoviePopup(movieDetails, mediaType);
+
+                localStorage.setItem("mediaType", mediaType);
+                localStorage.setItem("movieId", movieDetails.id);
+                window.location.href = "movieDetails.php";
             });
             
             var movieTitleContainer = document.createElement("p");
@@ -174,82 +177,4 @@ function UpdateCarrouselBtnDisplay(Pos, leftBtn, rightBtn){
     } else {
         rightBtn.style.visibility = "visible";
     }
-}
-
-////////////////////////////////////////////// Movie Popup //////////////////////////////////////////////
-
-function CreateMoviePopup(movieDetails, type){
-    
-    var moviePopupDiv = document.createElement("div");
-    moviePopupDiv.setAttribute("id", "moviePopup");
-    
-    var moviePopupContainer = document.createElement("div");
-    moviePopupContainer.setAttribute("id", "moviePopupContainer");
-    moviePopupDiv.appendChild(moviePopupContainer);
-
-    var moviePopupTitle = document.createElement("p");
-    moviePopupTitle.setAttribute("id", "moviePopupTittle");
-    if(type == "movie"){
-        if(movieDetails.title != null){
-            moviePopupTitle.textContent = movieDetails.title;
-        }
-        else{
-            moviePopupTitle.textContent = "Undefined";
-        }
-    }
-    else{
-        if(movieDetails.name != null){
-            moviePopupTitle.textContent = movieDetails.name;
-        }
-        else{
-            moviePopupTitle.textContent = "Undefined";
-        }
-    }
-    moviePopupContainer.appendChild(moviePopupTitle);
-    
-    var moviePopupPoster = document.createElement("img");
-    moviePopupPoster.setAttribute("id", "moviePopupPoster");
-    if(movieDetails.backdrop_path != null){
-        moviePopupPoster.setAttribute("src", "https://image.tmdb.org/t/p/w500/" + movieDetails.backdrop_path);
-    }
-    else{
-        moviePopupPoster.setAttribute("src", "images/NotAvailableIcon.png");
-    }
-    moviePopupContainer.appendChild(moviePopupPoster);
-
-    var moviePopupSynopsis = document.createElement("p");
-    moviePopupSynopsis.setAttribute("id", "moviePopupSynopsis");
-    if(movieDetails.overview != "" || movieDetails.overview != null){
-        moviePopupSynopsis.textContent = movieDetails.overview;
-    }
-    else{
-        moviePopupSynopsis.textContent = "No Synopsis available :( ";
-    }
-    moviePopupContainer.appendChild(moviePopupSynopsis);
-    
-    var moviePopupVoteAverage = document.createElement("p");
-    moviePopupVoteAverage.setAttribute("id", "moviePopupVoteAverage");
-    var roundedVoteAverage = (Math.round(movieDetails.vote_average * 10) / 10).toFixed(1);
-    if(movieDetails.vote_average != null){
-        moviePopupVoteAverage.textContent = roundedVoteAverage;
-    }
-    else{
-        moviePopupVoteAverage.textContent = "??";
-    }
-    moviePopupContainer.appendChild(moviePopupVoteAverage);
-    
-    var moviePopupCloseIcon = document.createElement("img");
-    moviePopupCloseIcon.setAttribute("id", "moviePopupCloseIcon");
-    moviePopupCloseIcon.setAttribute("src", "images/closeIconWhite.png");
-    moviePopupContainer.appendChild(moviePopupCloseIcon);
-    moviePopupCloseIcon.addEventListener("click", () => {
-        moviePopupDiv.setAttribute("class", "popupClosing");
-        setTimeout(() =>{
-            moviePopupDiv.remove();
-        }, 250)
-    });
-
-    var rightGalleryDiv = document.getElementById("RightGallery");
-    rightGalleryDiv.parentNode.insertBefore(moviePopupDiv, rightGalleryDiv.nextSibling);
-
 }
