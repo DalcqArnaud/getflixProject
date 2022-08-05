@@ -315,6 +315,8 @@ function UpdateCarrouselBtnDisplay(Pos, leftBtn, rightBtn){
 
 ////////////////////////////////////////////// Movie Popup //////////////////////////////////////////////
 
+
+
 function CreateMoviePopup(movieDetails){
     
     var moviePopupDiv = document.createElement("div");
@@ -392,6 +394,12 @@ function CreateMoviePopup(movieDetails){
     moviePopupCommentBtn.setAttribute("value", "View Comments");
     moviePopupContainer.appendChild(moviePopupCommentBtn);
     moviePopupCommentBtn.addEventListener("click", ()=>{
+        localStorage.setItem("movieDetails", movieDetails.title);
+        window.location.href = "commentPage.php";
+        var x = localStorage.getItem("movieDetails");
+   let paragraph=document.getElementById("text")
+      paragraph.value= x;
+ console.log(paragraph)
         
     });
 
