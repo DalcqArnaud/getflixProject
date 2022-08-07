@@ -1,8 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #MovieDetailsDiv{
     margin: 5%;
     color: aliceblue;
 }
 
 #MovieDetailsTitle{
-    font-size: x-large;
+    font-size: 300%;
+    text-align: center;
+}
+
+#MovieDetailsPosterContainer{
+    width: 100%;
+    margin: 20px;
+}
+
+#MovieDetailsPoster{
+    width: 100%;
+    margin: auto;
+}
+
+#MovieDetailsTrailerDiv{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20px;
+    margin: 20px;
+}
+
+#MovieDetailsTrailerContainer{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+#MovieDetailsTrailer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#MovieDetailsSynopsis{
+    align-self: center;
+    margin: 0;
+    grid-row: 2/2;
+}
+
+#DotVoteAverage{
+    color: red;
+    font-size: xx-large;
+    place-self: center;
+    grid-column: 1/1;
+    grid-row: 1/1;
+    z-index: -1;
+}
+
+#MovieDetailsVoteAverageDiv{
+    grid-row: 1/1;
+    height: 100%;
+    display: inline;
+    /* display: grid;
+    grid-template-columns: 1fr 20%; */
+}
+
+#MovieDetailsVoteAverageContainer{
+    /* width: 100%;
+    height: 100%; */
+    display: grid;
+    place-items: center;
+}
+
+#MovieDetailsVoteAverageContainer::after{
+    padding-bottom: 100%;
+}
+
+#MovieDetailsVoteAverage{
+    margin: 0;
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+
+#MovieDetailsTrailerInfos{
+    display: grid;
+    grid-template-rows: 10% 90%;
 }

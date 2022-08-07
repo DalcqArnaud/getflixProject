@@ -65,19 +65,35 @@
   
     <div id="MovieDetailsDiv">
         <p id="MovieDetailsTitle"></p>
-        <img id="MovieDetailsPoster">
-        <p id="MovieDetailsSynopsis"></p>
-        <p id="MovieDetailsVoteAverage"></p>
+        <div id="MovieDetailsTrailerDiv">
+            <div id="MovieDetailsTrailerContainer">
+                <iframe id="MovieDetailsTrailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="MovieDetailsTrailerInfos">
+                <div id="MovieDetailsVoteAverageDiv">
+                    <p>User Note :</p>
+                    <div id="MovieDetailsVoteAverageContainer">
+                        <p id="MovieDetailsVoteAverage"></p>
+                        <i class="fa-solid fa-circle" id="DotVoteAverage"></i>
+                    </div>
+                </div>
+                <p id="MovieDetailsSynopsis"></p>
+            </div>
+        </div>
+        <div id="MovieDetailsPosterContainer">
+            <img id="MovieDetailsPoster">
+        </div>
     </div>
 
-  <script src="./movie.js"></script>
-  <script src="./movieDetailsScript.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsp1UyJoMp4YLEuNSfAp+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="./movie.js"></script>
+    <script src="./movieDetailsScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsp1UyJoMp4YLEuNSfAp+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="https://kit.fontawesome.com/3daa86828a.js" crossorigin="anonymous"></script>  
 
-  <script type="text/javascript " src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>
-  <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js "></script>
-  <script type="text/javascript " src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js "></script>
+    <script type="text/javascript " src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js "></script>
+    <script type="text/javascript " src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js "></script>
 </body>
 
 </html>

@@ -2,7 +2,6 @@
 
 var mediaType = localStorage.getItem("mediaType");
 var id = localStorage.getItem("movieId");
-console.log(mediaType);
 GetMovieDetails(id);
 
 function GetMovieDetails(movieId){
@@ -40,7 +39,7 @@ function UpdateMovieDetails(movieDetails){
         moviePoster.setAttribute("src", "images/NotAvailableIcon.png");
     }
     else{
-        moviePoster.setAttribute("src", "https://image.tmdb.org/t/p/w500/" + movieDetails.backdrop_path);
+        moviePoster.setAttribute("src", "https://image.tmdb.org/t/p/w1280/" + movieDetails.backdrop_path);
     }
 
     var movieSynopsis = document.getElementById("MovieDetailsSynopsis");
@@ -60,15 +59,34 @@ function UpdateMovieDetails(movieDetails){
         movieVoteAverage.textContent = roundedVoteAverage;    
     }
 
+    UpdateMovieTrailer();
+}
 
-//     console.log(movieDetails.id);
-//     fetch("https://api.themoviedb.org/3/movie/"+ movieDetails.id +"/videos?api_key=f088ebb3ea3afd9640eb95267cc47330&language=en-US")
-//     .then(response => {
-//         return response.json();
-//     })
-//     .then(videos => {
-//         console.log(videos);
-//     });
-    
-    
+function UpdateMovieTrailer(){
+    fetch("https://api.themoviedb.org/3/"+ mediaType +"/"+ id +"/videos?api_key=f088ebb3ea3afd9640eb95267cc47330&language=en-US")
+    .then(response => {
+        return response.json();
+    })
+    .then(videos => {
+        var movieTrailer = document.getElementById("MovieDetailsTrailer");
+        movieTrailer.setAttribute("src", CheckTrailerAvailability(videos));
+    });
+}
+
+function CheckTrailerAvailability(videos){
+    var isAvailable = false;
+    if(videos.results.length > 0){
+        for(let i = 0; i < videos.results.length; i++){
+            if(videos.results[i].site == "YouTube"){
+                isAvailable = true;
+                return "https://www.youtube.com/embed/" + videos.results[i].key;
+            }
+        }
+        if(!isAvailable){
+            return "https://www.youtube.com/embed/notavailabl";
+        }
+    }
+    else{
+        return "https://www.youtube.com/embed/notavailabl";
+    }
 }
