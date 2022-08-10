@@ -172,6 +172,20 @@ form :last-child{
 @media screen and (max-width: 1400px) {
 	form {
 	  display: block;
+	  
+	}
+	input{
+width: 60px;
+	}
+	#regP{
+		font-size: 20px;
+	}
+	.submit{
+		size: 30px;
+	}
+	#submit{
+		width: 60px;
+		font-size: xx-small;
 	}
 .avgrund-cover{
 		display: block;
