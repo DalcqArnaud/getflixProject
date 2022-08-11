@@ -16,7 +16,6 @@
 
 #MovieDetailsPosterContainer{
     width: 100%;
-    margin: 20px;
 }
 
 #MovieDetailsPoster{
@@ -27,8 +26,25 @@
 #MovieDetailsTrailerDiv{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
     column-gap: 20px;
-    margin: 20px;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 768px){
+    #MovieDetailsTrailerDiv{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        row-gap: 20px;
+        margin: 20px;
+    }
+
+    #MovieDetailsVoteAverageDiv{
+        grid-row: 1/1;
+        height: 100%;
+        place-self: center;
+    }
 }
 
 #MovieDetailsTrailerContainer{
@@ -49,9 +65,33 @@
 }
 
 #MovieDetailsSynopsis{
-    align-self: center;
+    align-self: baseline;
     margin: 0;
     grid-row: 2/2;
+    border: solid 3px #ce682b;
+    border-style: dashed solid;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 768px){
+    #MovieDetailsSynopsis{
+        font-size: large;
+    }
+
+    #MovieDetailsVoteAverageDiv{
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #MovieDetailsSynopsis{
+        font-size: x-large;
+    }
+
+    #MovieDetailsVoteAverageDiv{
+        transform: scale(1.4);
+    }
 }
 
 #DotVoteAverage{
@@ -67,10 +107,8 @@
 #MovieDetailsVoteAverageDiv{
     grid-row: 1/1;
     height: 100%;
-    align-self: center;
-    /* display: inline; */
-    /* display: grid;
-    grid-template-columns: 1fr 20%; */
+    place-self: center;
+    margin-left: -45px;
 }
 
 #MovieDetailsVoteAverageDiv > p{
@@ -78,8 +116,6 @@
 }
 
 #MovieDetailsVoteAverageContainer{
-    /* width: 100%;
-    height: 100%; */
     grid-row: 1/1;
     display: grid;
     place-items: center;

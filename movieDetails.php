@@ -67,8 +67,7 @@
             </div>
             <div id="MovieDetailsTrailerInfos">
                 <div id="MovieDetailsVoteAverageDiv">
-                    <p>User Note : <!--<span id="MovieDetailsVoteAverage"></span>--></p>
-                    <!-- <i class="fa-solid fa-circle" id="DotVoteAverage"></i> -->
+                    <p>User Note : </p>
                     <div id="MovieDetailsVoteAverageContainer">
                         <p id="MovieDetailsVoteAverage"></p>
                         <i class="fa-solid fa-star" id="DotVoteAverage"></i>
