@@ -1,0 +1,12 @@
+.alert{
+    background-image: url("/src/neflix\background.png");
+    margin:auto;
+    width: 300px;
+    height: 200px;
+    margin-top: 200px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+
+    
+}
