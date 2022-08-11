@@ -73,10 +73,7 @@
 
         </div>
         <div class="col-lg-6 col-md-6 col-sm-3">
-          <!-- <form action="" method="post">
-            <input type="email" name="email">
-            <input type="submit" value="Subscribe" style="background-color:#ce682b; color:white">
-          </form> -->
+   
 
           <div class="social-links mt-3 ">
             <a href="#" style="background-color:#ce682b; margin:20px" target="_blank "><i class="fa fa-github " style="color:white"></i></a>
