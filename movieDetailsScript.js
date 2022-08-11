@@ -50,13 +50,23 @@ function UpdateMovieDetails(movieDetails){
         movieSynopsis.innerHTML = movieDetails.overview;
     }
 
+    var movieBubble = document.getElementById("DotVoteAverage");
     var movieVoteAverage = document.getElementById("MovieDetailsVoteAverage");
     if(movieDetails.vote_average == null){
         movieVoteAverage.textContent = "??";
+        movieBubble.style.color = "gray";
     }
     else{
         var roundedVoteAverage = (Math.round(movieDetails.vote_average * 10) / 10).toFixed(1);
-        movieVoteAverage.textContent = roundedVoteAverage;    
+        movieVoteAverage.textContent = roundedVoteAverage;  
+        if(roundedVoteAverage <= 3.3){
+            movieBubble.style.color = "red";
+        }else if(roundedVoteAverage > 3.3 && roundedVoteAverage < 6.6){
+            movieBubble.style.color = "orange";
+        }
+        else{
+            movieBubble.style.color = "green";
+        }
     }
 
     UpdateMovieTrailer();

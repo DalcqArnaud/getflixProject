@@ -57,15 +57,17 @@
 #DotVoteAverage{
     color: red;
     font-size: xx-large;
-    place-self: center;
     grid-column: 1/1;
     grid-row: 1/1;
     z-index: -1;
+    margin-top: -4px;
+    transform: scale(1.25);
 }
 
 #MovieDetailsVoteAverageDiv{
     grid-row: 1/1;
     height: 100%;
+    align-self: center;
     /* display: inline; */
     /* display: grid;
     grid-template-columns: 1fr 20%; */
@@ -81,6 +83,9 @@
     grid-row: 1/1;
     display: grid;
     place-items: center;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 85px;
 }
 
 #MovieDetailsVoteAverageContainer::after{

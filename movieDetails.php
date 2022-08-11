@@ -71,10 +71,11 @@
             </div>
             <div id="MovieDetailsTrailerInfos">
                 <div id="MovieDetailsVoteAverageDiv">
-                    <p>User Note :</p>
+                    <p>User Note : <!--<span id="MovieDetailsVoteAverage"></span>--></p>
+                    <!-- <i class="fa-solid fa-circle" id="DotVoteAverage"></i> -->
                     <div id="MovieDetailsVoteAverageContainer">
                         <p id="MovieDetailsVoteAverage"></p>
-                        <i class="fa-solid fa-circle" id="DotVoteAverage"></i>
+                        <i class="fa-solid fa-star" id="DotVoteAverage"></i>
                     </div>
                 </div>
                 <p id="MovieDetailsSynopsis"></p>
