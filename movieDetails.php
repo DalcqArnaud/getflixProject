@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="movie.css">
   <link rel="stylesheet" href="movieDetailsStyle.css">
+  <link rel="stylesheet" href="filters.css">
 
 
   <title>Getflix</title>
@@ -34,28 +35,23 @@
           <ul class="navbar-nav w-100 justify-content-end m-2">
             <form class="d-flex" role="search" id="form">
               <input class="form-control me-2 w-75" type="search" placeholder="Search" aria-label="Search" id="search">
-              <button class="btn btn-outline" style="background-color:#ce682b; color:white; " type="submit">Search</button>
+              <a class="nav-link btn btn-outline " style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline;" aria-current="page" href="index.php" type="submit">search</a>
             </form>
 
             <li class="nav-item ">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link active san-serif btn btn-outline" style=" background-color:#ce682b;color:white; width:100px" aria-current="page" href="index.php">home</a>
+            <a class="nav-link btn btn-outline " style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline;" aria-current="page" href="index.php">home</a>
             </li>
-            </button>
+   
             <li class="nav-item">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link san-serif btn btn-outline" style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="tvshow.php">TV-Shows</a>
-              </button>
+            <a class="nav-link btn btn-outline" style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline;" aria-current="page"" href="tvshow.php">TV-Shows</a>
+     
             </li>
-            <li class="nav-item san-serif">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="movie.php">Movies</a>
-              </button>
+            <li class="nav-item">
+            <a class="nav-link btn btn-outline " style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline; " aria-current="page" href="movie.php">Movies</a>
+              
             </li>
-            <li class="nav-item san-serif">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="logout.php">Logout</a>
-              </button>
+            <li class="nav-item">
+            <a class="nav-link btn btn-outline "style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline; " aria-current="page" href="logout.php">Logout</a>
             </li>
           </ul>
     </nav>

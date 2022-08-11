@@ -503,3 +503,8 @@ main {
 .dots .dot.active {
     border-color: orange;
 }
+
+
+[class^="nav-item"]{
+    margin-top: 9px;
+}
