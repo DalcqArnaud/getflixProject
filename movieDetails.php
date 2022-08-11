@@ -1,4 +1,11 @@
-<?php ?>
+<?php
+//including the database connection file
+include_once("config.php");
+
+//fetching data in descending order (lastest entry first)
+//$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
+$result = mysqli_query($conn, "SELECT * FROM guestbook ORDER BY id DESC"); // using mysqli_query instead
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +21,20 @@
 
 
   <title>Getflix</title>
+  <style >
+
+   p{color:#ce682b; 
+ 
+font-size: 12px;}
+   h5{color:white}
+   .form{width: 200px;
+  height: 480px;}
+  /* input{height: 30px;} */
+  textarea{height: 50px;}
+  .commentBox{
+  margin:auto;
+width: 400px;}
+  </style>
 </head>
 
 <body>
@@ -83,7 +104,95 @@
         <div id="MovieDetailsPosterContainer">
             <img id="MovieDetailsPoster">
         </div>
+
+       
     </div>
+
+      
+
+<div class="row d-flex justify-content-center">
+		<div class="container-fluid">
+			<div class="row">
+						<!-- <h2 class=" text-center lh-lg font-monospace ">Comment Page</h2> -->
+	
+		<div class=" col-lg-6 col-sm-1 mt-lg-3 mt-sm-1 p-2 m-auto w-50 h-25 mb-lg-4">
+      
+			<form action="./add.php" method="post" id="gb-form" class=" form w-50 border border-1 m-auto">
+      <h2 class=" text-center lh-lg font-monospace text-white ">Comment</h2>
+					<!-- Name input -->
+					<div class=mb-3 id="movie-id">
+					<label class=" form-label" style="color:#ce682b" for="movieTitle ">Movie Title</label>
+					<input id="text" class="form-control w-75 m-auto" type="text" name="movieTitle" required />
+
+				</div>
+				<!-- Name input -->
+				<div class=" mb-3 ">
+					<label class=" form-label " style="color:#ce682b" for="name ">Name</label>
+					<input class="form-control w-75 m-auto" type="text" name="name" required />
+				</div>
+
+				<!-- Email address input -->
+				<div class="mb-3 ">
+					<label class=" form-label  " style="color:#ce682b" for="email">Email</label>
+					<input class=" form-control w-75 m-auto" type="text" name="email" required />
+				</div>
+
+				<!-- Message input -->
+				<div class=" mb-3 ">
+					<label class=" form-label  " style="color:#ce682b" for="comment">Comment</label>
+					<textarea type="text" class=" form-control w-75 m-auto" rows=" 2" cols="25" name="comment" required style="
+			height: 2rem "></textarea>
+					<div class=" d-grid ">
+						<input class="commentBtn btn btn-lg mt-3 p-2 text-white m-auto  " style="background-color:#ce682b ;width:100px" type="submit" name="Submit" value="Add" />
+					</div>
+				</div>
+				<!-- Form submissions success message -->
+				<div class=" d-none " id=" submitSuccessMessage ">
+					<div class=" text-center mb-3 ">Form submission successful!</div>
+				</div>
+
+			</form>
+		</div>
+  
+		<div class=" col-lg-6 col-sm-1 mt-lg-3 mt-sm-1 p-2  w-50 m-auto border-2 mb-lg-4">
+    <div class=" mb-3 ">
+    <div class="commentBox" >
+              <?php 
+        //while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
+
+  
+			
+        while($res = @mysqli_fetch_array($result)) {         
+          
+            echo "<p>".$res['name']."</p>";
+            // echo "<td>".$res['email']."</td>";
+            echo "<p>".$res['comment']."</p>"; 
+			      echo "<h5>".$res['movieTitle']."</h5>"; 
+						echo "<p>".$res['date']."</p>"; 
+						// echo "<p>".$res['movie_id']."</p>" 
+				
+            // echo "<td><a href=\"update.php?id=$res[id]\">Edit</a> 
+
+            
+		
+      
+     $commentscount ="<p>----------------------------------</p>";
+
+echo  $commentscount  ;    
+       
+					}
+        ?>
+    </div>
+
+
+
+           
+</div>
+				</div>
+
+        </div>
+        
+
 
     <script src="./movie.js"></script>
     <script src="./movieDetailsScript.js"></script>

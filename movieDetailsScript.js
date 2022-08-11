@@ -2,7 +2,12 @@
 
 var mediaType = localStorage.getItem("mediaType");
 var id = localStorage.getItem("movieId");
+var mediaType = localStorage.getItem("mediaType");
+var x= localStorage.getItem("movieDetails");
+console.log(id)
 GetMovieDetails(id);
+
+
 
 function GetMovieDetails(movieId){
     fetch("https://api.themoviedb.org/3/"+ mediaType +"/"+ movieId +"?api_key=f088ebb3ea3afd9640eb95267cc47330&language=en-US")
@@ -31,8 +36,15 @@ function UpdateMovieDetails(movieDetails){
         }
         else{
             movieTitle.innerHTML = movieDetails.name;
+            console.log(movieTitle.innerHTML)
         }
     }
+
+   let movieComment= movieTitle.innerHTML;
+    let paragraph=document.getElementById("text")
+ paragraph.value= movieComment;
+ console.log(paragraph.value)
+
     
     var moviePoster = document.getElementById("MovieDetailsPoster");
     if(movieDetails.backdrop_path == null){
@@ -88,5 +100,20 @@ function CheckTrailerAvailability(videos){
     }
     else{
         return "https://www.youtube.com/embed/notavailabl";
+
+
     }
+ 
+
+    
 }
+
+
+// var x = localStorage.getItem("movieDetails",movieDetails)
+
+// console.log(x)
+
+// let movieDiv=document.getElementById("movie-id")
+//  let paragraph=document.getElementById("text")
+//  paragraph.value= x;
+//  console.log(paragraph.vlaue)

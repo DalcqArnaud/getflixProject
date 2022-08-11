@@ -178,3 +178,4 @@ function UpdateCarrouselBtnDisplay(Pos, leftBtn, rightBtn){
         rightBtn.style.visibility = "visible";
     }
 }
+
