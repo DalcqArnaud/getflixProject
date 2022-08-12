@@ -149,8 +149,9 @@ function showMovies(data) {
         main.appendChild(movieEl);
 
         document.getElementById(id).addEventListener('click', () => {
-            console.log(id)
-            openNav(movie)
+            localStorage.setItem("mediaType", "tv");
+            localStorage.setItem("movieId", id);
+            window.location.href = "movieDetails.php";
         })
     })
 }
