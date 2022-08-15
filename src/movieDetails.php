@@ -20,69 +20,56 @@ $result = @mysqli_query($conn, "SELECT * FROM guestbook ORDER BY id DESC"); // u
   <link rel="stylesheet" href="movieDetailsStyle.css">
 
 
-  <title>Getflix</title>
+  <title>SwartzFlix</title>
   <style >
 
-   p{color:#ce682b; 
- 
-font-size: 12px;}
-   h5{color:white}
-   .form{width: 200px;
-  height: 480px;}
+  .commentBox>p{color:#ce682b; font-size: 12px;}
+  .commentBox>h5{color:white}
+  .form{width: 200px; height: 480px;}
   /* input{height: 30px;} */
   textarea{height: 50px;}
-  .commentBox{
-  margin:auto;
-width: 400px;}
+  .commentBox{margin:auto; width: 400px;}
   </style>
 </head>
 
 <body>
-  <div id="nav">
+<div id="nav">
 
-    <nav class="navbar navbar-expand-lg  navbar-light justify-content-end font-sans-serif m-3">
-      <div class="container-fluid shadow-lg fixed-top" style="color:white">
-        <a class="navbar-brand me-5 " href="#home-page">
-          <h1 class="text-white lh-lg font-sans-serif" >SwartzFlix</h1>
-        </a>
-        <button class="navbar-toggler" style="background-color:#ce682b; color:white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg  navbar-light justify-content-end font-sans-serif m-3">
+  <div class="container-fluid shadow-lg fixed-top" style="color:white" id="navContainer">
+  <a class="navbar-brand me-5 " style="padding-left: 20px;text-shadow: -6px 8px 0px #CE5937;"; href="movieGalleryHome.php">
+        <h1 class="text-white lh-lg font-sans-serif" id="logo1" style="text-shadow: -3px 6px 0px #CE5937;">SwartzFlix</h1>
+      </a> 
+    <button class="navbar-toggler" style="background-color:#ce682b; color:white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-          <ul class="navbar-nav w-100 justify-content-end m-2">
-            <form class="d-flex" role="search" id="form">
-              <input class="form-control me-2 w-75" type="search" placeholder="Search" aria-label="Search" id="search">
-              <button class="btn btn-outline" style="background-color:#ce682b; color:white; " type="submit">Search</button>
-            </form>
+      <ul class="navbar-nav w-100 justify-content-end m-2">
+        <form class="d-flex" role="search" id="form">
+          <input class="form-control me-2 w-75" type="search" placeholder="Search" aria-label="Search" id="search">
+          <!--<a class="nav-link btn btn-outline " style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline;" aria-current="page" href="" type="submit">Search</a>-->
+        </form>
 
-            <li class="nav-item ">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link active san-serif btn btn-outline" style=" background-color:#ce682b;color:white; width:100px" aria-current="page" href="./movieGalleryHome.php">home</a>
-            </li>
-            </button>
-            <li class="nav-item">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link san-serif btn btn-outline" style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="tvshow.php">TV-Shows</a>
-              </button>
-            </li>
-            <li class="nav-item san-serif">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="movie.php">Movies</a>
-              </button>
-            </li>
-            <li class="nav-item san-serif">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="logout.php">Logout</a>
-              </button>
-            </li>
-          </ul>
-    </nav>
+        <li class="nav-item ">
+        <a class="nav-link btn btn-outline " style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline;" aria-current="page" href="movieGalleryHome.php">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link btn btn-outline" style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline;" aria-current="page"" href="tvshow.php">TV-shows</a>
+        </li>
+        <li class="nav-item san-serif">
+        <a class="nav-link btn btn-outline " style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline; " aria-current="page" href="movie.php">Movies</a>
+        </li>
+        <li class="nav-item san-serif">
+        <a class="nav-link btn btn-outline "style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline; " aria-current="page" href="logout.php">Logout</a>
+        </li>
+      </ul>
+</nav>
 
 
-  </div>
+</div>
   
   <div id="MovieDetailsDiv">
         <p id="MovieDetailsTitle"></p>

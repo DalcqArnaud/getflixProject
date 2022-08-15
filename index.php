@@ -9,85 +9,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./src/home.css">
+  <link rel="stylesheet" href="./src/home2.css">
 </head>
-<title>Getflix</title>
+<title>SwartzFlix</title>
 </head>
 
 <body>
-  <div class="warraper">
-    <div id="nav">
+  <nav class="navbar " style="border-bottom: 1px solid #CE5937">
+      <div class="col-lg-3 col-md-3 col-sm-3  col-xs-12 ">
+        <a class="navbar-brand me-5 " style="padding-left: 20px;text-shadow: -6px 8px 0px #CE5937;"; href="">
+          <h1 class="text-white lh-lg font-sans-serif" id="logo1" style="text-shadow: -3px 6px 0px #CE5937;">SwartzFlix</h1>
+      </a>    
+      </div>
 
-      <nav class="navbar navbar-expand-lg  navbar-light justify-content-end font-sans-serif m-3">
-        <div class="container-fluid shadow-lg fixed-top" style="color:white">
-          <a class="navbar-brand me-5 " href="#home-page">
-            <h1 class="text-white lh-lg font-sans-serif">SwartzFlix</h1>
-          </a>
-          <button class="navbar-toggler" style="background-color:#ce682b; color:white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  d-flex" style="align-items: center;justify-content: center; color: #CE5937">
+        <p id="SWF">SWF</p>
+      </div>
 
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <div class="col-lg-3 col-md-12 col-sm-12-xs-12  justify-content-around">
+    
+          <a id="logIn" class="nav-link btn btn-outline " style="  padding:10px; text-decoration: none; font-weight: bold; font-size: 40px; display: inline; color: #CE5806;" aria-current="page" href="src/login.php">Log-in</a>
+        
+      </div>
+      </div>
+  </nav>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <ul class="navbar-nav w-100 justify-content-end ">
+  <div class="row">
+    <main class="flex-shrink-1 bg-image" style=" margin:none; background-image: url('images/universcine-svod-catalogue.jpg'); height: 850px; background-size:100%; z-index: index -3;">
+
+        <div class="row mt-5" style="overflow-y:scroll">
+         <div class="jumbotron  mx-auto mt-5 mb-5 p-4" >
+           <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+          <h1 class="display-5 text-center p-2" style=" color: #CE5937; " class="textsha"><strong>Make way:</strong>  <br> SwartzFlix has finally arrived !</h1>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+             
+                <p class="lead m-3 " class="textsha" style="text-align: center">Tired of paying for five differents greedy casting company media services cackling while gargling on your every data?   SwartzFlix is here for you, oh you brave lamenting souls. 
+            We will introduce you to a whole universe of binging solace,  making you forget about the surrending oblivion!  So come and join us! Don't even hesitate! Sign up quick, sign in quicker ! </p>  <a class="nav-link btn btn-outline    " style=" float:right ; color:#CE5937; ; padding:10px; font-size: 30px;  text-decoration: underline; font-weight: bol; display: inline-block; justify-self: center; align-self: end" aria-current="page" href="./src/register.php">Sign-up
+            </a> <p><br> P.S.: (We also sell fake doorknobs.)
+                </p>
          
 
-              <li class="nav-item san-serif m-2">
-                <button class="btn btn-outline-light  text-center" type="button">
-                  <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="./src/register.php">SignUp</a>
-                </button>
-              </li>
-            </ul>
-      </nav>
-
-
-    </div>
-
-
-    <main class="flex-shrink-1 bg-image" style="
-    background-image: url('./src/neflix background.png');
-    height: 400px;
-    background-size:100%;
-  ">
-        <div class="jumbotron m-auto mt-5">
-
-          <h1 class="display-5 text-center p-2">Welcome</h1>
-          <p class="lead m-3 text-center">Lorem ipsum, necessitatibus dignissimos quo fugiat vero omnis libero hic cupiditate sapiente consequatur ullam explicabo cum incidunt id?</p>
-          <div class="text-center ">
-          <button class="btn btn-outline-light text-center" type="button">
-            <a class="nav-link active san-serif btn btn-outline   " style=" background-color:#ce682b;color:white; width:100px; padding:10px; " aria-current="page" href="./src/login.php">Login</a>
-            </buttun>
-        </div>
-
-
-
-    </main>
-
-
-  <footer class="footer mt-auto py-3 ">
-    <div class="container">
-      <div class="row h-25">
-        <div class="col-lg-6 col-md-6 col-sm-3">
-          <h1>SwartzFlix</h1>
-
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-3">
-   
-
-          <div class="social-links mt-3 ">
-            <a href="#" style="background-color:#ce682b; margin:20px" target="_blank "><i class="fa fa-github " style="color:white"></i></a>
-            <a href="#" style="background-color:#ce682b; margin:20px" target="_blank "><i class="fa fa-linkedin " style="color:white"></i></a>
-            <a href="#" style="background-color:#ce682b; margin:20px"><i class="fa fa-instagram " target="_blank " style="color:white"></i></a>
-            <a href="#" style="background-color:#ce682b; margin:20px" target="_blank "><i class="fa fa-youtube " style="color:white"></i></a>
-
-            <div class="copyright col-lg-12"> &copy; Copyright <strong><span>SwartzFlix</span></strong>. All Rights Reserved </div>
-            <div class="credits col-lg-12"> Designed by <a style="color:#ce682b" href="#">getflixgroup</a>
+      
+              
+           
             </div>
+        </div>
           </div>
         </div>
+        </main>
+</div>
+
+
+  <footer class="footer mt-auto py-3  " style=" background-color:#001336; -webkit-box-shadow: -15px 5px 15px 2px #FF8B12, 0px 0px 50px 25px #FF8B12; box-shadow: -15px 5px 15px 2px #FF8B12, 0px 0px 50px 25px #FF8B12;">
+      
+    <div class="row h-25 d-">
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 " style="display:grid">
+        <p class="textsha" style =" text-shadow: -7px 5px 20px #CE5806; margin:auto;  justify-self: center">SwartzFlix
+        </p>
+      </div>
+      <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 "> 
+      </div>
+          
+      <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" style="display:grid;">
+        <div style="justify-self: center"> &copy; Copyright <strong><span>Getflix</span></strong>. All Rights Reserved <br>
+              Designed by 
+              <a style="color:#ce682b;text-shadow: -7px 5px 20px #CE5806;" href="#">getflixgroup
+              </a>
+              </div>
+      </div>
+    </div>
   </footer>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsp1UyJoMp4YLEuNSfAp+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js "></script>

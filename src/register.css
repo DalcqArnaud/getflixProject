@@ -19,59 +19,43 @@ body {
 	z-index: 1;
 
 	opacity:1;
-	background: rgba(184, 106, 4, 0.886);
+	background: #001336;
 }
 
 
 	
-	.avgrund-active .avgrund-contents {
-		-webkit-filter: blur(2px);
-		   -moz-filter: blur(2px);
-		    -ms-filter: blur(2px);
-		        filter: blur(2px);
-	}
-	.no-blur.avgrund-active .avgrund-contents {
-		-webkit-filter: none;
-		   -moz-filter: none;
-		    -ms-filter: none;
-		        filter: none;
-	}
+.avgrund-active .avgrund-contents {
+	-webkit-filter: blur(2px);
+		-moz-filter: blur(2px);
+		-ms-filter: blur(2px);
+			filter: blur(2px);
+}
+.no-blur.avgrund-active .avgrund-contents {
+	-webkit-filter: none;
+		-moz-filter: none;
+		-ms-filter: none;
+			filter: none;
+}
 
 aside{
-	/* display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(6, 1fr);
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
-	width: 40%;
-	height: 600px;
-	position: relative;
-    left: 33%;
-	top: 10%;
- text-align: center; */
+	margin:auto;
+	margin-top:100px;
 
-margin:auto;
-margin-top:100px;
-
-width: 400px;
-height: 500px;
+	width: 400px;
+	height: 500px;
 
 	opacity: 1;
 	z-index: 2;
 	padding: 30px;
-	color: #ce682b;
-	background: #001336;
+	color: aliceblue;
+	background: #ce682b;
 	box-shadow: 0px 0px 60px rgba( 0, 0, 0, 0.3 );
-	border-radius: 3px;
 	box-sizing: border-box;
+	border: solid 3px aliceblue;
+	border-radius: 5px;
 
 	transform: scale( 0.8 );
 }
-
-
-
-
-
 
 .regP{
 	grid-area: 1/1/2/3;
@@ -80,67 +64,42 @@ height: 500px;
 	align-items: center;
 	font-size: xx-large;
 	left: auto;
-	
-
-	color: #ce682b
 }
 
-
-/*.first1{
-	position: absolute;
-	top: 20%;
-	right: 60%;
-}*/
 form {
-	grid-area: 2/1/6/3;
+	grid-area: 2/1/6/1;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-    grid-gap:20px;
-	margin-top: 10%;
-	float: left;
+	grid-template-rows: 20% 20% 20% 30% 10%;
 	text-align: center;
-}
-
-
-
-
-#close{
-	grid-area: 1/1/2/4;
-	width: 25%;
-	height: 25%;
-	background: rgb(67, 54, 54);
-	border: whitesmoke 3px;
-	color: white;
-
-	width: 10%;
-	height: 40%;
-
-
-} 
-#confirm{
-	grid-area: 3/2/4/3 ;
+	row-gap: 5px;
 }
 
 .first{
-	grid-area: 1/1/2/3;
+	width: 80%;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
 	justify-self: center;
 }
 
-.lastGr{
-	grid-area:1/2/2/3;
+.second{
+	width: 80%;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	justify-self: center;
 }
 
-
-
-form :last-child{
-	text-align: center
+.third{
+	width: 80%;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	justify-self: center;
 }
+
 #submit{
-	background:#ce682b;
+	background:#001336;
 	color: white;
 padding: 10px;
 	width:12vw;
@@ -149,9 +108,9 @@ padding: 10px;
 }
 
 .submit{
-	grid-area: 3/1/4/3;
     padding:10px;
 }
+
 input{
 	width: 150px;
 	height: 35px;

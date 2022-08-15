@@ -97,89 +97,39 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src="nav2.js"></script> -->
     <link rel="stylesheet" href="login.css">
-  
+    <title>SwartzFlix</title>
 
   
 
 </head>
 
 <body>
-<div id="nav">
+  <div id="nav">
 
-<nav class="navbar navbar-expand-lg  navbar-light justify-content-end font-sans-serif m-3">
+    <nav class="navbar navbar-expand-lg  navbar-light justify-content-end font-sans-serif m-3">
             <div class="container-fluid shadow-lg fixed-top" style="color:white">
-                <a class="navbar-brand me-5 " href="#home-page">
-                    <h1 class="text-white lh-lg font-sans-serif" >Getflix</h1>
-                </a>
+                <!-- <a class="navbar-brand me-5 " href="../index.php">
+                    <h1 class="text-white lh-lg font-sans-serif" >SwartzFlix</h1>
+                </a> -->
+                <a class="navbar-brand me-5 " style="padding-left: 20px;text-shadow: -6px 8px 0px #CE5937;"; href="../index.php">
+                  <h1 class="text-white lh-lg font-sans-serif" id="logo1" style="text-shadow: -3px 6px 0px #CE5937;">SwartzFlix</h1>
+                </a> 
                 <button class="navbar-toggler"  style="background-color:#ce682b; color:white"type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" style="margin: auto" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline" style="background-color:#ce682b; color:white;" type="submit">Search</button>
-      </form> -->
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- <form class="d-flex me-5" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline" style="background-color:#ce682b; color:white; " type="submit">Search</button>
-      </form> -->
+
                     <ul class="navbar-nav w-100 justify-content-end m-2">
-                    <!-- <form class="d-flex" role="search" id="form" >
-        <input class="form-control me-2 w-75" type="search" placeholder="Search" aria-label="Search" id="search">
-        <button class="btn btn-outline" style="background-color:#ce682b; color:white; " type="submit">Search</button>
-      </form> -->
-<!-- 
-                        <li class="nav-item san-serif ">
-                        <button class="btn btn-outline-light  text-center"  type="button" >
-                            <a class="nav-link active san-serif btn btn-outline"  style=" background-color:#ce682b;color:white; width:100px"aria-current="page" href="../index.php">home</a>
-</button> </li> -->
+
 
                         <li class="nav-item san-serif">
                         <button class="btn btn-outline-light  text-center"  type="button" >
                             <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="register.php">Sign-Up</a>
-</button>   </li>
+          </button>   </li>
                     </ul>
-        </nav>
-
-<!-- <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li> -->
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul> -->
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
-
-
-    <!-- </div>
-  </div>
-</nav> -->
+    </nav>
   </div>
 
 
@@ -196,27 +146,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <p id="regP">Login</p>
                     </div> 
                     
-                    <div class="">    
-                        <label id="username" class="username" for="username">User name</label><br>
-                        <input  type="username" name="username" id="username" placeholder="username" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" 
-                        class="username <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                    <div class="center">    
+                        <label id="username" class="username" for="username">Username</label><br>
+                        <input  type="username" name="username" id="username" placeholder="Username" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" 
+                        class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
 					value="<?php echo $username; ?>"><br>
           <span class="invalid-feedback"><?php echo $username_err; ?></span>
                     </div> </br>
 
-                    <div class=""> 
+                    <div class="center"> 
                         <label for="password">Password</label><br>
-                        <input class="password <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" type="password"  name="password" id="password" placeholder="Password" required  >
+                        <input class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" type="password"  name="password" id="password" placeholder="Password" required  >
                         <span class="invalid-feedback"><?php echo $password_err; ?></span><br>
                         </br>
                     </div></br></br>
 
-                    <div class="center" >
+                      <div class="center" >
                         <input class="subtn" type="submit" name="submit" id="submit" value="Submit" placeholder="submit"><br>
                
 
                         <p>Don't have an account?<span><a href="register.php">Sign up now.</a></span></p>
-                        </div>
+                      </div>
                     
                 </form>
                 

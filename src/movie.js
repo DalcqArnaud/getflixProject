@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-console.log(form);
+//console.log(form);
 
 form.addEventListener('submit', (el) => {
     el.preventDefault();

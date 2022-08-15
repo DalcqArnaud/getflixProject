@@ -13,17 +13,17 @@
   <link rel="stylesheet" href="movieGalleryStyle.css">
 
 
-  <title>Getflix</title>
+  <title>SwartzFlix</title>
 </head>
 
 <body>
   <div id="nav">
 
     <nav class="navbar navbar-expand-lg  navbar-light justify-content-end font-sans-serif m-3">
-      <div class="container-fluid shadow-lg fixed-top" style="color:white">
-        <a class="navbar-brand me-5 " href="#home-page">
-          <h1 class="text-white lh-lg font-sans-serif" >SwartzFlix</h1>
-        </a>
+      <div class="container-fluid shadow-lg fixed-top" style="color:white" id="navContainer">
+      <a class="navbar-brand me-5 " style="padding-left: 20px;text-shadow: -6px 8px 0px #CE5937;"; href="movieGalleryHome.php">
+            <h1 class="text-white lh-lg font-sans-serif" id="logo1" style="text-shadow: -3px 6px 0px #CE5937;">SwartzFlix</h1>
+          </a> 
         <button class="navbar-toggler" style="background-color:#ce682b; color:white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
           <span class="navbar-toggler-icon"></span>
@@ -32,30 +32,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
           <ul class="navbar-nav w-100 justify-content-end m-2">
-            <form class="d-flex" role="search" id="formMovie">
+            <form class="d-flex" role="search" id="form">
               <input class="form-control me-2 w-75" type="search" placeholder="Search" aria-label="Search" id="search">
-              <button class="btn btn-outline" style="background-color:#ce682b; color:white; " type="submit">Search</button>
+              <!--<a class="nav-link btn btn-outline " style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline;" aria-current="page" href="" type="submit">Search</a>-->
             </form>
 
             <li class="nav-item ">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link active san-serif btn btn-outline" style=" background-color:#ce682b;color:white; width:100px" aria-current="page" href="movieGalleryHome.php">home</a>
+            <a class="nav-link btn btn-outline " style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline;" aria-current="page" href="movieGalleryHome.php">Home</a>
             </li>
-            </button>
             <li class="nav-item">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link san-serif btn btn-outline" style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="tvshow.php">TV-Shows</a>
-              </button>
+            <a class="nav-link btn btn-outline" style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline;" aria-current="page"" href="tvshow.php">TV-shows</a>
             </li>
             <li class="nav-item san-serif">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="movie.php">Movies</a>
-              </button>
+            <a class="nav-link btn btn-outline active" style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline; " aria-current="page" href="">Movies</a>
             </li>
             <li class="nav-item san-serif">
-              <button class="btn btn-outline-light  text-center" type="button">
-                <a class="nav-link btn btn-outline " style="background-color:#ce682b; color:white; width:100px" aria-current="page" href="logout.php">Logout</a>
-              </button>
+            <a class="nav-link btn btn-outline "style="color:#ce682b;padding:10px; text-decoration: none; font-weight: bold;  display: inline; " aria-current="page" href="logout.php">Logout</a>
             </li>
           </ul>
     </nav>

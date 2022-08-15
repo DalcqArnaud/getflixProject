@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <!-- <script src="nav2.js"></script> -->
     <link rel="stylesheet" href="movie.css">
     <link rel="stylesheet" href="register.css">
-
+    <title>SwartzFlix</title>
 
 </head>
 
@@ -115,9 +115,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <nav class="navbar navbar-expand-lg  navbar-light justify-content-end font-sans-serif m-3">
             <div class="container-fluid shadow-lg fixed-top" style="color:white">
-                <a class="navbar-brand me-5 " href="#home-page">
+                <!-- <a class="navbar-brand me-5 " href="../index.php">
                     <h1 class="text-white lh-lg font-sans-serif">SwartzFlix</h1>
-                </a>
+                </a> -->
+                <a class="navbar-brand me-5 " style="padding-left: 20px;text-shadow: -6px 8px 0px #CE5937;"; href="../index.php">
+                  <h1 class="text-white lh-lg font-sans-serif" id="logo1" style="text-shadow: -3px 6px 0px #CE5937;">SwartzFlix</h1>
+                </a>   
                 <button class="navbar-toggler"  style="background-color:#ce682b; color:white"type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   
           <span class="navbar-toggler-icon"></span>
@@ -199,27 +202,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        <form action=" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" >
             
             <div class="first">
-                     <label class="UserName" for="UserName">UserName</label><br>
+                     <label class="UserName" for="UserName">Username</label><br>
                      <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
-					value="<?php echo $username; ?>" placeholder= "User Name" required minlength="4" maxlength="16">
-          <span class="invalid-feedback"><?php echo $username_err; ?></span>
+					            value="<?php echo $username; ?>" placeholder= "Username" required minlength="4" maxlength="16">
+                      <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>
-                       <div class="7"> 
+            <div class="second"> 
                   <label for="password">Password</label><br>
-                 <input class="UserName <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
-					value="<?php echo $password; ?>"  type="password"  name="password" id="password" placeholder="Password" required  ><br>
-          <span class="invalid-feedback"><?php echo $password_err; ?></span>
-        </div>
-             <div class=""> <label for="confirm">Confirm</label><br>
-                <input class="userName <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
-					value="<?php echo $confirm_password; ?>" type="password" name="confirm_password" id="confirm" placeholder="Confirm Password" required ><br>
-          <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-        </div>
+                 <input class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
+                  value="<?php echo $password; ?>"  type="password"  name="password" id="password" placeholder="Password" required  ><br>
+                  <span class="invalid-feedback"><?php echo $password_err; ?></span>
+            </div>
+            <div class="third"> <label for="confirm">Confirm</label><br>
+                <input class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
+					      value="<?php echo $confirm_password; ?>" type="password" name="confirm_password" id="confirm" placeholder="Confirm Password" required ><br>
+                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+            </div>
     
             <div class="submit" >
                  <input type="submit" name="submit" id="submit" value="Submit" placeholder="submit"><br>
             </div>
-            <p>Already have an account? <a href="login.php" class="text-white">Login here</a></p>
+            <p id="end">Already have an account? <a href="login.php">Login here</a></p>
        </form>
             
        </aside>

@@ -4,7 +4,7 @@ var mediaType = localStorage.getItem("mediaType");
 var id = localStorage.getItem("movieId");
 var mediaType = localStorage.getItem("mediaType");
 var x= localStorage.getItem("movieDetails");
-console.log(id)
+//console.log(id)
 GetMovieDetails(id);
 
 
@@ -36,14 +36,14 @@ function UpdateMovieDetails(movieDetails){
         }
         else{
             movieTitle.innerHTML = movieDetails.name;
-            console.log(movieTitle.innerHTML)
+            //console.log(movieTitle.innerHTML)
         }
     }
 
    let movieComment= movieTitle.innerHTML;
     let paragraph=document.getElementById("text")
  paragraph.value= movieComment;
- console.log(paragraph.value)
+ //console.log(paragraph.value)
 
     
     var moviePoster = document.getElementById("MovieDetailsPoster");
@@ -62,13 +62,23 @@ function UpdateMovieDetails(movieDetails){
         movieSynopsis.innerHTML = movieDetails.overview;
     }
 
+    var movieBubble = document.getElementById("DotVoteAverage");
     var movieVoteAverage = document.getElementById("MovieDetailsVoteAverage");
     if(movieDetails.vote_average == null){
         movieVoteAverage.textContent = "??";
+        movieBubble.style.color = "gray";
     }
     else{
         var roundedVoteAverage = (Math.round(movieDetails.vote_average * 10) / 10).toFixed(1);
-        movieVoteAverage.textContent = roundedVoteAverage;    
+        movieVoteAverage.textContent = roundedVoteAverage;
+        if(roundedVoteAverage <= 3.3){
+            movieBubble.style.color = "red";
+        }else if(roundedVoteAverage > 3.3 && roundedVoteAverage < 6.6){
+            movieBubble.style.color = "orange";
+        }
+        else{
+            movieBubble.style.color = "green";
+        }  
     }
 
     UpdateMovieTrailer();

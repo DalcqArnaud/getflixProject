@@ -181,7 +181,7 @@ function CreateMoviesCarrousel(genre){
     carrouselDiv.appendChild(carrouselContainer);
     
     var carrouselLeftBtn = document.createElement("img");
-    carrouselLeftBtn.setAttribute("src", "images/carrouselBtn.png");
+    carrouselLeftBtn.setAttribute("src", "../images/carrouselBtn.png");
     carrouselLeftBtn.setAttribute("class", "carrouselBtn");
     carrouselLeftBtn.setAttribute("id", "carrouselLeftBtn");
     carrouselLeftBtn.style.visibility = "hidden";
@@ -197,7 +197,7 @@ function CreateMoviesCarrousel(genre){
     });
     
     var carrouselRightBtn = document.createElement("img");
-    carrouselRightBtn.setAttribute("src", "images/carrouselBtn.png");
+    carrouselRightBtn.setAttribute("src", "../images/carrouselBtn.png");
     carrouselRightBtn.setAttribute("class", "carrouselBtn");
     carrouselRightBtn.setAttribute("id", "carrouselRightBtn");
     carrouselRightBtn.style.visibility = "hidden";
