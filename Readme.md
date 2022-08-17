@@ -6,7 +6,7 @@ This project is a consolidation challenge, the main goal is to make us practisin
 ---
 ### Final result
 
-Live version of the project [coming soon](https://github.com/DalcqArnaud/getflixProject)!
+Live version of the project [coming soon](https://swartzflix.herokuapp.com/)!
 
 ---
 ### Group members
